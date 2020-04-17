@@ -1,0 +1,89 @@
+#!/bin/bash
+# Anaconda env setup
+ 
+display_usage() { 
+   echo
+   echo "  Auto-Config: Installing Anaconda"
+   echo "  ********************************"
+   echo
+   echo "  usage: ${0##*/} -p path_to_install_anaconda [-m]  "
+   echo
+   echo "  flags:  -p  full path to where anaconda will be installed"
+   echo "         [-m] miniconda will be installed instead of anaconda"
+   echo
+   exit 1
+	} 
+
+# set miniconda to False
+        mini=0
+# if less than three arguments supplied, display usage 
+	if [  $# -le 1 ] 
+	then 
+		display_usage
+		exit 1
+	fi 
+# if less than two arguments supplied, display usage 
+	if [  $# -ge 4 ] 
+	then 
+		display_usage
+		exit 1
+	fi 
+# check whether user had supplied -h or --help . If yes display usage 
+	if [[ ( $# == "--mini") ||  $# == "-m" ]] 
+	then 
+		mini=1
+	fi 
+# check whether user had supplied -h or --help . If yes display usage 
+	if [[ ( $# == "--help") ||  $# == "-h" ]] 
+	then 
+		display_usage
+		exit 0
+	fi 
+
+while getopts w: option
+  do
+  case "${option}"
+  in
+  p) export INSTALL_DIR=${OPTARG};;
+  esac
+done
+
+if [ ${INSTALL_DIR:0:1} != "/" ]; then
+  echo "PREFIX must use full path"
+  exit 1
+fi
+
+OS="`uname`"
+
+case $OS in
+  'Linux1')
+    OS='Linux'
+    if [ $mini == 1 ]
+    then
+	    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O conda_install.sh
+    else
+	    wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh -O conda_install.sh
+    fi
+    ;;
+  'Darwin1') 
+    OS='Mac'
+    if [ $mini == 1 ]
+    then
+	    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O conda_install.sh
+    else
+	    wget https://repo.anaconda.com/archive/Anaconda3-2020.02-MacOSX-x86_64.sh -O conda_install.sh
+    fi
+    ;;
+  *) 
+    echo 'Anaconda for $OS is not available'
+    exit 1
+    ;;
+esac
+
+./conda_install.sh -p $INSTALL_DIR
+
+conda install conda-build
+conda update conda
+conda update conda-build
+
+rm conda_intall.sh
