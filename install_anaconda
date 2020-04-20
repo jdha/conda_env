@@ -28,23 +28,13 @@ display_usage() {
 		display_usage
 		exit 1
 	fi 
-# check whether user had supplied -h or --help . If yes display usage 
-	if [[ ( $# == "--mini") ||  $# == "-m" ]] 
-	then 
-		mini=1
-	fi 
-# check whether user had supplied -h or --help . If yes display usage 
-	if [[ ( $# == "--help") ||  $# == "-h" ]] 
-	then 
-		display_usage
-		exit 0
-	fi 
 
-while getopts w: option
+while getopts :mp: option
   do
   case "${option}"
   in
   p) export INSTALL_DIR=${OPTARG};;
+  m) mini=1;;
   esac
 done
 
@@ -56,7 +46,7 @@ fi
 OS="`uname`"
 
 case $OS in
-  'Linux1')
+  'Linux')
     OS='Linux'
     if [ $mini == 1 ]
     then
@@ -65,7 +55,7 @@ case $OS in
 	    wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh -O conda_install.sh
     fi
     ;;
-  'Darwin1') 
+  'Darwin') 
     OS='Mac'
     if [ $mini == 1 ]
     then
@@ -75,15 +65,15 @@ case $OS in
     fi
     ;;
   *) 
-    echo 'Anaconda for $OS is not available'
+    echo Anaconda for $OS is not available
     exit 1
     ;;
 esac
 
-./conda_install.sh -p $INSTALL_DIR
+chmod 700 conda_install.sh
 
-conda install conda-build
+./conda_install.sh -b -p $INSTALL_DIR
+
 conda update conda
-conda update conda-build
 
-rm conda_intall.sh
+rm conda_install.sh
