@@ -1,0 +1,8 @@
+name: jupyter
+channels:
+- conda-forge
+dependencies:
+- jupyter-forward
+- jupyterlab
+- nbterm
+- nb_conda_kernels
