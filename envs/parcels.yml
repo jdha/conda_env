@@ -1,4 +1,4 @@
-name: base
+name: parecels
 channels:
   - conda-forge
   - defaults
@@ -17,4 +17,3 @@ dependencies:
   - spyder-kernels
   - xarray
   - jupyter_contrib_nbextensions
-prefix: /opt/mambaforge
