@@ -53,7 +53,7 @@ case $OS in
 	    'minimamba not yet configured'
     else
 	    curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
-	    bash Mambaforge-$(uname)-$(uname -m).sh
+	    bash Mambaforge-$(uname)-$(uname -m).sh -b -p $INSTALL_DIR
     fi
     ;;
   'Darwin') 
@@ -62,8 +62,8 @@ case $OS in
     then
 	    'minimamba not yet configured'
     else
-	    curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(OS)-$(uname -m).sh" 
-	    bash Mambaforge-$(OS)-$(uname -m).sh
+	    curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$OS-$(uname -m).sh" 
+	    bash Mambaforge-$OS-$(uname -m).sh -b -p $INSTALL_DIR
     fi
     ;;
   *) 
@@ -71,6 +71,3 @@ case $OS in
     exit 1
     ;;
 esac
-
-conda update conda
-
