@@ -1,4 +1,4 @@
-name: parecels
+name: parcels
 channels:
   - conda-forge
   - defaults
