@@ -17,3 +17,6 @@ dependencies:
   - spyder-kernels
   - xarray
   - jupyter_contrib_nbextensions
+  - cf_xarray
+  - seaborn
+  - clisops
