@@ -1,5 +1,5 @@
 # conda_env
-conda environment files
+conda environment files and install scripts
 
 # adding env
 
@@ -37,11 +37,41 @@ function jupyter-local {
   eval $cmd
   PID=$!
   wait $PID
-  token=`ssh  sci2 'cd / && conda activate jupyter && jupyter lab list'`
+  token=`ssh  $hostname 'cd / && conda activate jupyter && jupyter lab list'`
   token=`echo $token | grep -o token[a-zA-Z0-9./?=_%:-]*`
   cmd="ssh -C -N -L $port:127.0.0.1:$port $hostname -f"
   echo "Running '$cmd'"
   eval $cmd
   open "$url$token"
 }
+```
+
+*NB if the connection is lost you'll have to reopen the tunnel to reconnect:*
+```ssh -C -N -L $port:127.0.0.1:$port $hostname -f```
+
+# ssh config example to access JASMIN
+
+```
+Host jasmin
+   User XXXX
+   Hostname login1.jasmin.ac.uk
+   IdentityFile ~/.ssh/id_rsa_jasmin
+   Proxycommand ssh -A -Y -q livljobs2 -W %h:%p
+
+Host sci* jasmin-sci* jasmin-xfer* nemo* lotus xfer1 xfer2
+   User XXXX
+   IdentityFile ~/.ssh/id_rsa_jasmin
+   ExitOnForwardFailure yes
+   Proxycommand ssh -A -Y -q jasmin -W %h:%p
+
+Host *
+   TCPKeepAlive yes
+   ServerAliveInterval 15
+   ForwardAgent yes
+   ForwardX11Trusted yes
+   ForwardX11 yes
+   IdentitiesOnly=yes
+   XAuthLocation /opt/X11/bin/xauth
+   AddKeysToAgent ask
+   UseKeychain yes
 ```
