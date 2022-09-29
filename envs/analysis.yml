@@ -20,3 +20,4 @@ dependencies:
   - cf_xarray
   - seaborn
   - clisops
+  - gsm
