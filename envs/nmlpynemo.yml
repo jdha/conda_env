@@ -1,0 +1,12 @@
+name: nml
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - mamba==0.24.0
+  - conda==4.13.0
+  - pip
+  - sip
+  - pyqt 
+prefix: /opt/mambaforge
