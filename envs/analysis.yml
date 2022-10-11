@@ -21,3 +21,4 @@ dependencies:
   - seaborn
   - clisops
   - gsm
+  - dask
