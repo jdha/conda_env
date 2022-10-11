@@ -7,13 +7,6 @@ dependencies:
   - mamba==0.24.0
   - conda==4.13.0
   - pip
-  - pyproj
-  - ca-certificates
-  - certifi
-  - openssl
-  - cartopy
   - ipykernel
-  - pooch
+  - spyder
   - spyder-kernels
-  - xarray
-  - jupyter_contrib_nbextensions
