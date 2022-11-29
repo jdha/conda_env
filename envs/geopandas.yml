@@ -1,0 +1,24 @@
+name: gp
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - mamba==0.24.0
+  - conda==4.13.0
+  - pip
+  - pyproj
+  - ca-certificates
+  - certifi
+  - openssl
+  - cartopy
+  - ipykernel
+  - pooch
+  - spyder-kernels
+  - xarray
+  - jupyter_contrib_nbextensions
+  - cf_xarray
+  - seaborn
+  - clisops
+  - gsw
+  - geopandas
