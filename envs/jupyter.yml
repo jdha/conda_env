@@ -1,4 +1,4 @@
-name: jupyter
+name: jup
 channels:
   - conda-forge
   - defaults
@@ -17,3 +17,5 @@ dependencies:
   - spyder-kernels
   - xarray
   - jupyter_contrib_nbextensions
+  - jupyter_nbextensions_configurator
+  - jupyterlab
