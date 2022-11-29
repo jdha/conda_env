@@ -1,4 +1,4 @@
-name: spyder
+name: nml
 channels:
   - conda-forge
   - defaults
@@ -7,6 +7,6 @@ dependencies:
   - mamba==0.24.0
   - conda==4.13.0
   - pip
-  - ipykernel
-  - spyder
-  - spyder-kernels
+  - sip
+  - pyqt 
+prefix: /opt/mambaforge

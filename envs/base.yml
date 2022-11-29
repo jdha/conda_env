@@ -11,9 +11,7 @@ dependencies:
   - ca-certificates
   - certifi
   - openssl
-  - cartopy
   - ipykernel
   - pooch
   - spyder-kernels
-  - xarray
   - jupyter_contrib_nbextensions
