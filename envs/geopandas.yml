@@ -1,11 +1,9 @@
-name: gp
+name: gp_newest
 channels:
   - conda-forge
   - defaults
 dependencies:
   - python=3.9
-  - mamba==0.24.0
-  - conda==4.13.0
   - pip
   - pyproj
   - ca-certificates
@@ -22,3 +20,15 @@ dependencies:
   - clisops
   - gsw
   - geopandas
+  - xarray
+  - dask
+  - dask-labextension
+  - dask-jobqueue
+  - xesmf
+  - shapely
+  - readline
+  - rioxarray    
+  - roocs-utils     
+  - rasterio
+  - salem
+  - xgcm
