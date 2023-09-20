@@ -1,0 +1,15 @@
+name: traj
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - cartopy
+  - ipykernel
+  - pooch
+  - seaborn
+  - geopandas
+  - pandas=2.1.0 
+  - movingpandas
+  - geoviews
+  - hvplot
