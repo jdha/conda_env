@@ -1,0 +1,14 @@
+name: jdma
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pyproj
+  - ca-certificates
+  - certifi
+  - openssl
+  - ipykernel
+  - pip:
+    - git+https://github.com/cedadev/jdma_client
