@@ -2,6 +2,8 @@ name: cmc-beta
 channels:  
   - conda-forge
 dependencies:  
+  - ipykernel
+  - matplotlib
   - pip  
   - pip:    
     - copernicus-marine-client>=0.10.0<0.11.0
