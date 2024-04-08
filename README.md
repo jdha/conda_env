@@ -48,6 +48,8 @@ function jupyter-local {
 
 *NB if the connection is lost you'll have to reopen the tunnel to reconnect:*
 ```ssh -C -N -L $port:127.0.0.1:$port $hostname -f```
+or for machines like archer2:
+```ssh -C -N -L 8986:lander:8986 archer2 -f```
 
 # ssh config example to access JASMIN
 
