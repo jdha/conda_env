@@ -34,5 +34,3 @@ dependencies:
   - libgfortran5
   - libopenblas
   - blas
-  - pip:
-      - roi-extract

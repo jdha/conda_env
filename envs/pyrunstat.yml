@@ -25,7 +25,7 @@ dependencies:
   - ipykernel
   - libgfortran
   - openblas
+  - pip:
       - pandas-stubs
-      - pyrunstat
       - types-pytz
       - types-seaborn
