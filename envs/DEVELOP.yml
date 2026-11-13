@@ -1,0 +1,25 @@
+name: DEVELOP
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - cruft
+  - make
+  - ca-certificates
+  - certifi
+  - openssl
+  - conda-merge
+  - pytest-cov
+  - pytest
+  - pydata-sphinx-theme
+  - sphinx-autoapi
+  - myst-parser
+  - pre-commit
+  - mypy
+  - pip
+  - sphinx
+  - pip:
+      - setuptools==82.0.1
+      - setuptools-scm==10.0.5
+      - vcs-versioning==1.1.1
+      - wheel==0.47.0

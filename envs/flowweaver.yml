@@ -1,0 +1,17 @@
+name: fw
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - cartopy
+  - ipykernel
+  - pooch
+  - xarray
+  - seaborn
+  - pandas
+  - geopandas
+  - floweaver
+  - ipysankeywidget
+  - ca-certificates
+  - certifi
+  - openssl

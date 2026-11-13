@@ -1,15 +1,18 @@
 name: traj
 channels:
   - conda-forge
-  - defaults
 dependencies:
-  - python=3.10
+  - python=3.12
+  - pandas
   - cartopy
   - ipykernel
   - pooch
   - seaborn
   - geopandas
-  - pandas=2.1.0 
   - movingpandas
   - geoviews
   - hvplot
+  - ca-certificates
+  - certifi
+  - openssl
+  - stonesoup

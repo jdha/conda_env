@@ -1,13 +1,17 @@
 name: jupyter
 channels:
   - conda-forge
-  - defaults
 dependencies:
-  - python=3.10
+  - python=3.12
   - pip
   - ipykernel
   - pooch
   - spyder-kernels
   - ipywidgets
   - jupyterlab
-  - nbdime
+  - jupyter-dash
+  - ca-certificates
+  - certifi
+  - openssl
+  - pip:
+      - ipysankeywidget

@@ -1,0 +1,24 @@
+name: xncml
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pyproj
+  - ca-certificates
+  - certifi
+  - openssl
+  - cartopy
+  - ipykernel
+  - pooch
+  - spyder-kernels
+  - xarray
+  - cf_xarray
+  - seaborn
+  - clisops
+  - dask
+  - pip:
+      - seawater
+      - xmltodict
+      - xncml
+      - xsdata

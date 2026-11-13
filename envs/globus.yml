@@ -1,0 +1,8 @@
+name: globus
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - globus-cli
+  - ca-certificates
+  - openssl

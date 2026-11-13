@@ -1,0 +1,22 @@
+name: plotting
+channels:
+  - conda-forge
+dependencies:
+  - pip
+  - python=3.12
+  - xarray
+  - geopandas
+  - numpy
+  - scikit-learn
+  - scipy
+  - plotly
+  - ipykernel
+  - spyder-kernels
+  - bokeh
+  - matplotlib
+  - cartopy
+  - hvplot
+  - ca-certificates
+  - certifi
+  - openssl
+  - markupsafe

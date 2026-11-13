@@ -1,9 +1,8 @@
 name: gp
 channels:
   - conda-forge
-  - defaults
 dependencies:
-  - python=3.10
+  - python=3.12
   - pip
   - pyproj
   - ca-certificates
@@ -20,15 +19,20 @@ dependencies:
   - clisops
   - gsw
   - geopandas
-  - xarray
   - dask
   - dask-labextension
   - dask-jobqueue
   - xesmf
   - shapely
   - readline
-  - rioxarray    
-  - roocs-utils     
+  - rioxarray
+  - roocs-utils
   - rasterio
   - salem
   - xgcm
+  - numpy
+  - libgfortran5
+  - libopenblas
+  - blas
+  - pip:
+      - roi-extract

@@ -1,0 +1,31 @@
+name: pyrs
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - numpy
+  - netcdf4
+  - matplotlib
+  - xarray
+  - seaborn
+  - conda-merge
+  - ca-certificates
+  - certifi
+  - openssl
+  - make
+  - mypy
+  - myst-parser
+  - pre-commit
+  - pydata-sphinx-theme
+  - pytest
+  - pytest-cov
+  - sphinx
+  - sphinx-autoapi
+  - ipykernel
+  - libgfortran
+  - openblas
+      - pandas-stubs
+      - pyrunstat
+      - types-pytz
+      - types-seaborn

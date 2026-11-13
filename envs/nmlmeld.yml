@@ -1,0 +1,20 @@
+name: nmlmeld
+channels:
+  - conda-forge
+dependencies:
+  - pyqt
+  - f90nml
+  - python=3.12
+  - ca-certificates
+  - openssl
+  - conda-merge
+  - make
+  - mypy
+  - myst-parser
+  - pre-commit
+  - pydata-sphinx-theme
+  - pytest
+  - pytest-cov
+  - sphinx
+  - sphinx-autoapi
+  - pip

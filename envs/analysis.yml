@@ -1,9 +1,8 @@
 name: analysis
 channels:
   - conda-forge
-  - defaults
 dependencies:
-  - python=3.10
+  - python=3.12
   - pip
   - pyproj
   - ca-certificates
@@ -17,5 +16,15 @@ dependencies:
   - cf_xarray
   - seaborn
   - clisops
-  - gsm
   - dask
+  - hvplot
+  - libgfortran5
+  - xgcm
+  - flox
+  - xeofs
+  - f90nml
+  - pip:
+      - gsw
+      - seawater
+      - skillmetrics
+      - xlsxwriter

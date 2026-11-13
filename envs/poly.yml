@@ -1,0 +1,18 @@
+name: poly
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - ipykernel
+  - spyder-kernels
+  - xarray
+  - dask
+  - numpy
+  - matplotlib
+  - netcdf4
+  - ca-certificates
+  - certifi
+  - openssl
+  - pip:
+      - roipoly

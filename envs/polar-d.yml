@@ -1,0 +1,24 @@
+name: polar-d
+channels:
+  - conda-forge
+dependencies:
+  - pip
+  - python=3.12
+  - geopandas
+  - numpy
+  - scikit-learn
+  - scipy
+  - plotly
+  - ipykernel
+  - spyder-kernels
+  - xarray
+  - cftime
+  - netcdf4
+  - ca-certificates
+  - certifi
+  - openssl
+  - nbformat
+  - ipywidgets
+  - pip:
+      - kaleido
+      - polar-diagrams
